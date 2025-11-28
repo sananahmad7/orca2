@@ -1,3 +1,4 @@
+/* app/global.css */
 @import "tailwindcss";
 
 :root {
@@ -8,19 +9,25 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 🔽 This connects Tailwind's token --font-nunito to the Next font variable --nunito */
+  --font-nunito: var(--nunito);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
+   
     --foreground: #ededed;
   }
 }
 
+/* Let Tailwind control fonts via its tokens */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Remove this hardcoded Arial so your utilities actually show the custom font */
+  /* font-family: Arial, Helvetica, sans-serif; */
 }

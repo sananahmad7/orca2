@@ -1,6 +1,13 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/NavBar";
+import { Geist, Geist_Mono, Nunito } from "next/font/google";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--nunito",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +30,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable}`}
+      // 👆 put font variables on <html>
+    >
+      <body className="antialiased">
+        <Navbar />
         {children}
       </body>
     </html>
