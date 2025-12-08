@@ -6,10 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const services = [
-  { label: "Web Development", href: "/web-development" },
-  { label: "Mobile App Development", href: "/mobile-app-development" },
-  { label: "Digital Marketing", href: "/digital-marketing" },
-  { label: "Copywriting", href: "/copywriting" },
+  { label: "Web Development", href: "/services/web-development" },
+  { label: "Mobile App Development", href: "/services/mobile-app-development" },
+  { label: "Digital Marketing", href: "/services/digital-marketing" },
+  { label: "Copywriting", href: "/services/copywriting" },
 ];
 
 export default function Navbar() {
