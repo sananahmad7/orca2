@@ -16,14 +16,16 @@ const AboutHero: FC = () => {
         />
       </div>
 
-      {/* Color Overlay (black + teal) */}
-      <div className="pointer-events-none absolute inset-0 opacity-90 -z-10 bg-[radial-gradient(circle_at_top,_rgba(0,159,139,0.6)_0,_transparent_55%),linear-gradient(to_bottom_right,rgba(0,0,0,0.8),rgba(0,0,0,0.9))]" />
+      {/* Color Overlay (Black + Ocean Blue) */}
+      {/* CHANGED: Replaced Teal rgba(0,159,139) with Ocean Blue rgba(22,119,179) */}
+      <div className="pointer-events-none absolute inset-0 opacity-90 -z-10 bg-[radial-gradient(circle_at_top,_rgba(22,119,179,0.6)_0,_transparent_55%),linear-gradient(to_bottom_right,rgba(0,0,0,0.8),rgba(0,0,0,0.9))]" />
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex min-h-[60vh] items-center py-20 md:py-28 lg:py-32">
           <div className="max-w-3xl">
-            <p className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-teal-100 mb-4">
+            {/* CHANGED: Text color to Light Sky Blue/Blue-100 */}
+            <p className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-blue-100 mb-4 border border-white/10">
               About Orca Edge
             </p>
 

@@ -73,7 +73,8 @@ export default function ContactForm() {
       <div className="container mx-auto px-4 md:px-8">
         {/* Heading */}
         <div className="mb-10 md:mb-14 text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#009f8b] mb-3">
+          {/* CHANGED: Accent color to Ocean Blue */}
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#1677B3] mb-3">
             Contact
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -88,7 +89,7 @@ export default function ContactForm() {
         {/* Main layout */}
         <div className="grid gap-10 lg:gap-16 lg:grid-cols-2 items-start">
           {/* Left: Form */}
-          <div className="bg-white rounded-xl border border-slate-100 shadow-[0_18px_45px_rgba(15,23,42,0.08)] p-6 md:p-8">
+          <div className="bg-white rounded-xl border border-slate-100 shadow-[0_18px_45px_rgba(22,119,179,0.08)] p-6 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full name */}
               <div>
@@ -106,7 +107,8 @@ export default function ContactForm() {
                   required
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#009f8b] focus:ring-2 focus:ring-[#00ffdf]"
+                  // CHANGED: Focus border to Ocean Blue, Ring to Sky Blue
+                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#1677B3] focus:ring-2 focus:ring-[#38bdf8]"
                   placeholder="Jane Doe"
                 />
               </div>
@@ -127,7 +129,7 @@ export default function ContactForm() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#009f8b] focus:ring-2 focus:ring-[#00ffdf]"
+                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#1677B3] focus:ring-2 focus:ring-[#38bdf8]"
                   placeholder="you@company.com"
                 />
               </div>
@@ -147,7 +149,7 @@ export default function ContactForm() {
                   autoComplete="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#009f8b] focus:ring-2 focus:ring-[#00ffdf]"
+                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#1677B3] focus:ring-2 focus:ring-[#38bdf8]"
                   placeholder="+1 (555) 000-0000"
                 />
               </div>
@@ -167,7 +169,7 @@ export default function ContactForm() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#009f8b] focus:ring-2 focus:ring-[#00ffdf] resize-none"
+                  className="block w-full rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm md:text-base text-slate-900 shadow-sm outline-none transition-colors focus:border-[#1677B3] focus:ring-2 focus:ring-[#38bdf8] resize-none"
                   placeholder="Share a bit about your project, timelines, and what you’re hoping to achieve."
                 />
               </div>
@@ -175,7 +177,8 @@ export default function ContactForm() {
               {/* Feedback Messages (Success/Error) */}
               <div className="min-h-[24px]">
                 {successMessage && (
-                  <p className="text-sm font-semibold text-[#009f8b] animate-pulse">
+                  // CHANGED: Success color to Ocean Blue
+                  <p className="text-sm font-semibold text-[#1677B3] animate-pulse">
                     {successMessage}
                   </p>
                 )}
@@ -191,7 +194,8 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center cursor-pointer justify-center rounded-full bg-[#003144] px-7 py-3 text-sm md:text-base font-semibold tracking-[0.18em] uppercase text-white shadow-md shadow-[#003144]/30 transition-all hover:bg-[#009f8b] hover:shadow-[#009f8b]/40 disabled:opacity-70 disabled:cursor-not-allowed"
+                  // CHANGED: Button BG to Ocean Blue, Hover to Darker Blue
+                  className="inline-flex items-center cursor-pointer justify-center rounded-full bg-[#1677B3] px-7 py-3 text-sm md:text-base font-semibold tracking-[0.18em] uppercase text-white shadow-md shadow-[#1677B3]/30 transition-all hover:bg-[#126294] hover:shadow-[#1677B3]/40 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending..." : "Send message"}
                 </button>
@@ -202,18 +206,20 @@ export default function ContactForm() {
           {/* Right: Design / Info panel */}
           <div className="relative">
             {/* Background shape */}
-            <div className="absolute inset-0 rounded-3xl bg-[#003144] bg-[radial-gradient(circle_at_top,_#00ffdf_0,_#003144_45%,#001622_100%)] opacity-95" />
+            {/* CHANGED: Gradient to Ocean Blue base with Sky Blue radial */}
+            <div className="absolute inset-0 rounded-3xl bg-[#1677B3] bg-[radial-gradient(circle_at_top,_#38bdf8_0,_#1677B3_45%,#0f4c75_100%)] opacity-95" />
 
             {/* Content */}
             <div className="relative z-10 h-full w-full rounded-3xl px-7 py-8 md:px-10 md:py-12 text-white flex flex-col justify-between">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#00ffdf]/80 mb-3">
+                {/* CHANGED: Accent text to Sky Blue */}
+                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#38bdf8] mb-3">
                   Orca Edge
                 </p>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight mb-4">
                   Let&apos;s make your next digital move count.
                 </h2>
-                <p className="text-sm md:text-base text-slate-100/90 max-w-md mb-8">
+                <p className="text-sm md:text-base text-blue-50 max-w-md mb-8">
                   Whether you&apos;re planning a new build, overhaul, or ongoing
                   support, we&apos;ll help you choose the right approach before
                   you commit to anything.
@@ -221,20 +227,23 @@ export default function ContactForm() {
 
                 <div className="space-y-3 text-sm md:text-base">
                   <div className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rotate-45 bg-[#00ffdf]" />
-                    <p className="text-slate-100/90">
+                    {/* CHANGED: Diamond to Sky Blue */}
+                    <span className="mt-1 h-2 w-2 rotate-45 bg-[#38bdf8]" />
+                    <p className="text-blue-50">
                       Response within one business day.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rotate-45 bg-[#00d8bd]" />
-                    <p className="text-slate-100/90">
+                    {/* CHANGED: Diamond to Light Blue */}
+                    <span className="mt-1 h-2 w-2 rotate-45 bg-[#7dd3fc]" />
+                    <p className="text-blue-50">
                       No pushy sales calls—just practical guidance.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rotate-45 bg-[#009f8b]" />
-                    <p className="text-slate-100/90">
+                    {/* CHANGED: Diamond to White/Blue Tint */}
+                    <span className="mt-1 h-2 w-2 rotate-45 bg-[#bae6fd]" />
+                    <p className="text-blue-50">
                       Projects of all sizes, from landing pages to full
                       platforms.
                     </p>
@@ -243,7 +252,7 @@ export default function ContactForm() {
               </div>
 
               {/* Contact details / subtle footer */}
-              <div className="mt-8 border-t border-white/10 pt-6 text-xs md:text-sm text-slate-100/80">
+              <div className="mt-8 border-t border-white/10 pt-6 text-xs md:text-sm text-blue-100">
                 <p className="font-semibold tracking-[0.16em] uppercase mb-2">
                   Prefer email?
                 </p>

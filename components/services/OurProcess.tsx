@@ -23,7 +23,8 @@ const ServiceProcess: FC<ServiceProcessProps> = ({ title, steps }) => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
             {title}
           </h2>
-          <div className="h-1.5 w-24 bg-[#009f8b] mx-auto rounded-full" />
+          {/* CHANGED: Accent bar to Ocean Blue */}
+          <div className="h-1.5 w-164 bg-[#1677B3] mx-auto rounded-full" />
         </div>
 
         {/* Timeline Container */}
@@ -45,26 +46,26 @@ const ServiceProcess: FC<ServiceProcessProps> = ({ title, steps }) => {
                 >
                   {/* CENTER NODE: The Pivot Point */}
                   <div className="absolute left-8 top-0 md:left-1/2 md:top-8 md:-translate-x-1/2 z-10">
-                    {/* FIX APPLIED HERE: 
-                        1. Mobile: -translate-x-[7px] is kept to center the 16px circle on the left-8 line.
-                        2. Desktop: We use md:translate-x-0 to reset the shift, allowing the parent (which is already centered) to handle alignment.
-                    */}
-                    <div className="flex h-4 w-4 -translate-x-[7px] items-center justify-center rounded-full bg-white ring-4 ring-[#009f8b] md:h-6 md:w-6 md:translate-x-0 md:ring-[6px] shadow-lg"></div>
+                    {/* CHANGED: Ring color to Ocean Blue */}
+                    <div className="flex h-4 w-4 -translate-x-[7px] items-center justify-center rounded-full bg-white ring-4 ring-[#1677B3] md:h-6 md:w-6 md:translate-x-0 md:ring-[6px] shadow-lg"></div>
                   </div>
 
                   {/* MAIN CARD SIDE */}
                   <div className={`pl-20 md:pl-0 w-full md:w-[45%]`}>
                     <div
-                      className={`relative group bg-white rounded-sm p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-[#009f8b]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,159,139,0.1)] ${
+                      // CHANGED: Hover border and shadow to Ocean Blue RGB (22, 119, 179)
+                      className={`relative group bg-white rounded-sm p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-[#1677B3]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(22,119,179,0.15)] ${
                         isEven ? "md:text-right" : "md:text-left"
                       }`}
                     >
                       {/* Colored Eyebrow Label */}
-                      <span className="inline-block text-xs font-bold tracking-wider text-[#009f8b] uppercase mb-3 bg-[#009f8b]/10 px-3 py-1 rounded-full">
+                      {/* CHANGED: Text and BG to Ocean Blue */}
+                      <span className="inline-block text-xs font-bold tracking-wider text-[#1677B3] uppercase mb-3 bg-[#1677B3]/10 px-3 py-1 rounded-full">
                         Phase {stepNumber}
                       </span>
 
-                      <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-[#009f8b] transition-colors">
+                      {/* CHANGED: Hover text to Ocean Blue */}
+                      <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-[#1677B3] transition-colors">
                         {step.title}
                       </h3>
 

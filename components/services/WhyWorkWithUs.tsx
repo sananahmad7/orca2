@@ -8,8 +8,9 @@ type ServiceBenefitsProps = {
 
 const WhyWorkWithUs: FC<ServiceBenefitsProps> = ({ title, benefits }) => {
   return (
-    <section className="font-nunito bg-[#009f8b] py-12 md:py-16 relative overflow-hidden">
-      {/* Optional: Very subtle texture for the teal background */}
+    // CHANGED: Background to Ocean Blue (#1677B3)
+    <section className="font-nunito bg-[#1677B3] py-12 md:py-16 relative overflow-hidden">
+      {/* Optional: Very subtle texture for the background */}
       <div
         className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
@@ -34,30 +35,30 @@ const WhyWorkWithUs: FC<ServiceBenefitsProps> = ({ title, benefits }) => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative h-full bg-white border-2 border-transparent p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:border-slate-900 hover:shadow-[6px_6px_0px_0px_#0f172a]"
+              className="group relative h-full bg-white border-2 border-transparent p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:border-[#1677B3] hover:shadow-[6px_6px_0px_0px_#0f172a]"
             >
               {/* Card Header: Compacted */}
               <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-3">
-                <span className="font-mono text-xs font-black text-[#009f8b] bg-[#009f8b]/10 px-2 py-1 rounded">
+                {/* CHANGED: Badge colors to Ocean Blue */}
+                <span className="font-mono text-xs font-black text-[#1677B3] bg-[#1677B3]/10 px-2 py-1 rounded">
                   {(index + 1).toString().padStart(2, "0")}
                 </span>
-                {/* Decorative Line */}
-                <div className="h-0.5 flex-grow bg-slate-100 ml-4 group-hover:bg-[#009f8b] transition-colors duration-300" />
+                {/* Decorative Line - Hover color changed to Ocean Blue */}
+                <div className="h-0.5 flex-grow bg-slate-100 ml-4 group-hover:bg-[#1677B3] transition-colors duration-300" />
               </div>
 
               {/* Main Content */}
               <div className="flex items-start gap-4">
                 {/* Icon wrapper - Rotates on hover */}
                 <div className="mt-1.5 flex-shrink-0">
-                  <div className="h-2.5 w-2.5 bg-slate-200 rotate-45 group-hover:bg-[#009f8b] group-hover:rotate-90 transition-all duration-300" />
+                  {/* CHANGED: Square icon hover color to Ocean Blue */}
+                  <div className="h-2.5 w-2.5 bg-slate-200 rotate-45 group-hover:bg-[#1677B3] group-hover:rotate-90 transition-all duration-300" />
                 </div>
 
-                <p className="text-lg font-bold text-slate-800 leading-snug group-hover:text-slate-900">
+                <p className="text-lg font-bold text-slate-800 leading-snug group-hover:text-[#1677B3] transition-colors">
                   {benefit}
                 </p>
               </div>
-
-              {/* Arrow removed as requested */}
             </div>
           ))}
         </div>

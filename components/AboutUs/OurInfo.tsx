@@ -12,7 +12,8 @@ const OurInfo: FC = () => {
           {/* --- Block 1: The Header & Intro (Spans 2 columns) --- */}
           <div className="md:col-span-2 lg:col-span-2 bg-slate-50 rounded-3xl p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group">
             {/* Subtle background decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-slate-200/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[#009f8b]/10 transition-colors duration-700"></div>
+            {/* CHANGED: Hover color to Ocean Blue */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-slate-200/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[#1677B3]/10 transition-colors duration-700"></div>
 
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-6">
@@ -24,7 +25,8 @@ const OurInfo: FC = () => {
 
               <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-6">
                 Strategy. Design. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#009f8b] to-teal-600">
+                {/* CHANGED: Text Gradient to Ocean Blue -> Sky Blue */}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1677B3] to-[#38bdf8]">
                   Execution.
                 </span>
               </h2>
@@ -38,7 +40,8 @@ const OurInfo: FC = () => {
           </div>
 
           {/* --- Block 2: Vision (High Contrast Accent Card) --- */}
-          <div className="md:col-span-1 bg-[#009f8b] rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white shadow-xl shadow-teal-900/10 hover:shadow-teal-900/20 transition-all duration-300 transform hover:-translate-y-1">
+          {/* CHANGED: Background to Ocean Blue (#1677B3) */}
+          <div className="md:col-span-1 bg-[#1677B3] rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white shadow-xl shadow-blue-900/10 hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
             <div>
               <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6">
                 <LordIcon
@@ -49,7 +52,8 @@ const OurInfo: FC = () => {
                 />
               </div>
               <h3 className="text-2xl font-bold mb-2">Our Vision</h3>
-              <p className="text-teal-100/80 text-sm font-mono uppercase tracking-wider">
+              {/* CHANGED: Text color to Light Sky Blue */}
+              <p className="text-blue-100/80 text-sm font-mono uppercase tracking-wider">
                 The Destination
               </p>
             </div>
@@ -62,13 +66,15 @@ const OurInfo: FC = () => {
           </div>
 
           {/* --- Block 3: Mission (Clean Bordered Card) --- */}
-          <div className="md:col-span-1 bg-white border border-slate-200 rounded-3xl p-8 md:p-10 flex flex-col justify-between hover:border-[#009f8b]/30 transition-colors duration-300">
+          {/* CHANGED: Hover border color to Ocean Blue */}
+          <div className="md:col-span-1 bg-white border border-slate-200 rounded-3xl p-8 md:p-10 flex flex-col justify-between hover:border-[#1677B3]/30 transition-colors duration-300">
             <div>
               <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mb-6 border border-slate-100">
                 <LordIcon
                   src="https://cdn.lordicon.com/ehfrzide.json"
                   trigger="loop"
-                  colors="primary:#1e293b,secondary:#009f8b"
+                  // CHANGED: Secondary color to Ocean Blue hex
+                  colors="primary:#1e293b,secondary:#1677B3"
                   style={{ width: 32, height: 32 }}
                 />
               </div>
@@ -80,7 +86,8 @@ const OurInfo: FC = () => {
               </p>
             </div>
 
-            <p className="text-slate-600 leading-relaxed text-sm md:text-base mt-8 border-l-2 border-[#009f8b] pl-4">
+            {/* CHANGED: Border left color to Ocean Blue */}
+            <p className="text-slate-600 leading-relaxed text-sm md:text-base mt-8 border-l-2 border-[#1677B3] pl-4">
               To empower businesses with clear strategy, thoughtful design, and
               reliable technology—so they can operate efficiently and grow
               confidently.

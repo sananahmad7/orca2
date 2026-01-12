@@ -14,7 +14,7 @@ const ServiceHero: FC<ServiceHeroProps> = ({
   imageSrc,
 }) => {
   return (
-    <section className="font-nunito bg-white py-12 ">
+    <section className="font-nunito bg-white mt-15 2xl:mt-0 py-12 ">
       <div className="container mx-auto px-4 md:px-8">
         {/* Main row: Flex container with items-center for vertical alignment */}
         <div className="flex flex-col  md:flex-row items-center justify-between ">

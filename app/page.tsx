@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <Hero />
       <Intro />
-      <CoreServices />
+      {/* <CoreServices /> */}
       <WhyChooseUs />
       <OurProcess />
     </div>

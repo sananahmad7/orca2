@@ -22,8 +22,9 @@ const reasons: Reason[] = [
     number: "01",
     title: "Strategy First, Execution Second",
     description:
-      "We don&apos;t start with trends; we start with your goals. Every website, campaign, or piece of content is grounded in strategy.",
-    icon: <LuTarget className="h-5 w-5 text-[#009f8b]" />,
+      "We don't start with trends; we start with your goals. Every website, campaign, or piece of content is grounded in strategy.",
+    // CHANGED: Teal -> Ocean Blue
+    icon: <LuTarget className="h-5 w-5 text-[#1677B3]" />,
   },
   {
     id: "full-service",
@@ -31,7 +32,7 @@ const reasons: Reason[] = [
     title: "Full-Service, Seamless Delivery",
     description:
       "Design, development, marketing, and copy all work together as one cohesive system.",
-    icon: <LuLayers className="h-5 w-5 text-[#009f8b]" />,
+    icon: <LuLayers className="h-5 w-5 text-[#1677B3]" />,
   },
   {
     id: "performance-obsessed",
@@ -39,7 +40,7 @@ const reasons: Reason[] = [
     title: "Performance & Results Obsessed",
     description:
       "We track traffic, leads, and conversions so every decision moves the needle.",
-    icon: <LuLifeBuoy className="h-5 w-5 text-[#009f8b]" />,
+    icon: <LuLifeBuoy className="h-5 w-5 text-[#1677B3]" />,
   },
   {
     id: "transparent-communication",
@@ -47,23 +48,23 @@ const reasons: Reason[] = [
     title: "Transparent Communication",
     description:
       "Clear timelines, regular updates, and honest recommendations at every stage.",
-    icon: <LuMessageSquare className="h-5 w-5 text-[#009f8b]" />,
+    icon: <LuMessageSquare className="h-5 w-5 text-[#1677B3]" />,
   },
   {
     id: "long-term-partnerships",
     number: "05",
     title: "Long-Term Partnerships",
     description:
-      "We don&apos;t just launch and leave. We stay to support, improve, and scale with you.",
-    icon: <LuHandshake className="h-5 w-5 text-[#009f8b]" />,
+      "We don't just launch and leave. We stay to support, improve, and scale with you.",
+    icon: <LuHandshake className="h-5 w-5 text-[#1677B3]" />,
   },
   {
     id: "reliable-support",
     number: "06",
     title: "Reliable Ongoing Support",
     description:
-      "Questions, tweaks, or new ideas—we&apos;re a message away with responsive support.",
-    icon: <LuLifeBuoy className="h-5 w-5 text-[#009f8b]" />,
+      "Questions, tweaks, or new ideas—we're a message away with responsive support.",
+    icon: <LuLifeBuoy className="h-5 w-5 text-[#1677B3]" />,
   },
 ];
 
@@ -74,7 +75,7 @@ const WhyChooseUs: FC = () => {
         {/* Header */}
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-extrabold text-slate-900 md:text-4xl">
-            Why Choose <span className="text-[#009f8b]">Orca Edge?</span>
+            Why Choose <span className="text-[#1677B3]">Orca Edge?</span>
           </h2>
           <p className="mt-3 mx-auto max-w-2xl text-sm md:text-base text-slate-500">
             We combine strategic thinking with clean execution to deliver
@@ -85,14 +86,16 @@ const WhyChooseUs: FC = () => {
         {/* Reasons */}
         <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason) => (
-            <div key={reason.id} className="text-center">
+            <div key={reason.id} className="text-center group">
               {/* Icon Circle (smaller, leaner) */}
-              <div className="mx-auto mb-4 flex h-18 w-18 items-center justify-center rounded-full border border-[#009f8b]/30 bg-slate-50 text-xl shadow-sm">
+              {/* CHANGED: Border color to Blue/20 and added hover effect */}
+              <div className="mx-auto mb-4 flex h-18 w-18 items-center justify-center rounded-full border border-[#1677B3]/20 bg-slate-50 text-xl shadow-sm group-hover:border-[#1677B3] group-hover:shadow-md transition-all duration-300">
                 {reason.icon}
               </div>
 
               {/* Title */}
-              <h3 className="mb-2 text-base font-semibold text-[#003144]">
+              {/* CHANGED: Text color to match new dark blue tone */}
+              <h3 className="mb-2 text-base font-semibold text-slate-800 group-hover:text-[#1677B3] transition-colors">
                 {reason.title}
               </h3>
 
@@ -105,7 +108,8 @@ const WhyChooseUs: FC = () => {
         </div>
 
         {/* Subtle Divider */}
-        <div className="mt-14 mx-auto h-px w-24 bg-gradient-to-r from-transparent via-[#009f8b] to-transparent" />
+        {/* CHANGED: Gradient to use Blue palette */}
+        <div className="mt-14 mx-auto h-px w-24 bg-gradient-to-r from-transparent via-[#1677B3] to-transparent" />
       </div>
     </section>
   );

@@ -10,9 +10,11 @@ const advantages = [
       <LordIcon
         src="https://cdn.lordicon.com/zjdxuyoy.json"
         trigger="loop"
+        // ADDED: Theme colors (Primary: Ocean Blue, Secondary: Slate)
+        colors="primary:#1677B3,secondary:#64748b"
         style={{ width: "75px", height: "65px" }}
       />
-    ), // Placeholder - replace with actual icon
+    ),
   },
   {
     id: "creativity",
@@ -23,6 +25,7 @@ const advantages = [
       <LordIcon
         src="https://cdn.lordicon.com/audatjnx.json"
         trigger="loop"
+        colors="primary:#1677B3,secondary:#64748b"
         style={{ width: "75px", height: "65px" }}
       />
     ),
@@ -36,6 +39,7 @@ const advantages = [
       <LordIcon
         src="https://cdn.lordicon.com/kbscnwmr.json"
         trigger="loop"
+        colors="primary:#1677B3,secondary:#64748b"
         style={{ width: "75px", height: "65px" }}
       />
     ),
@@ -49,6 +53,7 @@ const advantages = [
       <LordIcon
         src="https://cdn.lordicon.com/psrsekxp.json"
         trigger="loop"
+        colors="primary:#1677B3,secondary:#64748b"
         style={{ width: "75px", height: "65px" }}
       />
     ),
@@ -62,6 +67,7 @@ const advantages = [
       <LordIcon
         src="https://cdn.lordicon.com/audatjnx.json"
         trigger="loop"
+        colors="primary:#1677B3,secondary:#64748b"
         style={{ width: "75px", height: "65px" }}
       />
     ),
@@ -80,7 +86,8 @@ const WhatSetsUsApart = () => {
               alt="Team collaboration"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#009f8b]/20 via-[#009f8b]/20 to-[#009f8b]/20" />
+            {/* CHANGED: Gradient overlay to Ocean Blue (#1677B3) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1677B3]/30 via-[#1677B3]/20 to-[#1677B3]/30 mix-blend-multiply" />
           </div>
 
           {/* Right Side - Content */}
@@ -93,13 +100,19 @@ const WhatSetsUsApart = () => {
 
             <div className="space-y-6">
               {advantages.map((advantage) => (
-                <div key={advantage.id} className="flex gap-4 items-center">
+                <div
+                  key={advantage.id}
+                  className="flex gap-4 items-center group"
+                >
                   {/* Icon */}
-                  <div className="flex-shrink-0">{advantage.iconSrc}</div>
+                  <div className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    {advantage.iconSrc}
+                  </div>
 
                   {/* Text Content */}
                   <div className="flex-1">
-                    <h3 className="font-nunito text-xl font-bold text-gray-900 mb-2">
+                    {/* CHANGED: Hover text color to Ocean Blue */}
+                    <h3 className="font-nunito text-xl font-bold text-gray-900 mb-2 group-hover:text-[#1677B3] transition-colors">
                       {advantage.title}
                     </h3>
                     <p className="font-nunito text-sm lg:text-base text-gray-600 leading-relaxed">

@@ -38,12 +38,14 @@ const ServiceCTA: FC<ServiceCTAProps> = ({
             {/* Modern "Pill" Button with Arrow Interaction */}
             <Link
               href={buttonLink}
-              className="group inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:bg-[#009f8b] hover:shadow-lg hover:shadow-[#009f8b]/25 hover:-translate-y-1"
+              // CHANGED: Hover BG and Shadow to Ocean Blue (#1677B3)
+              className="group inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:bg-[#1677B3] hover:shadow-lg hover:shadow-[#1677B3]/25 hover:-translate-y-1"
             >
               <span>{buttonText}</span>
 
               {/* Circle Icon wrapper */}
-              <div className="flex items-center justify-center h-8 w-8 rounded-full bg-white/10 group-hover:bg-white text-white group-hover:text-[#009f8b] transition-all duration-300">
+              {/* CHANGED: Group hover text color to Ocean Blue */}
+              <div className="flex items-center justify-center h-8 w-8 rounded-full bg-white/10 group-hover:bg-white text-white group-hover:text-[#1677B3] transition-all duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4 transform transition-transform duration-300 group-hover:-rotate-45"
