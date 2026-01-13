@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="relative w-full mt-10 lg:mt-0 max-h-[75vh] bg-slate-900 overflow-hidden flex items-center justify-center font-nunito text-white  py-20">
+    <section className="relative w-full mt-10  max-h-[75vh] bg-slate-900 overflow-hidden flex items-center justify-center font-nunito text-white  py-20 xl:py-30">
       {/* 1. Background Image Area */}
       <div className="absolute inset-0 z-0">
         <Image

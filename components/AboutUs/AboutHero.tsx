@@ -22,7 +22,7 @@ const AboutHero: FC = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex min-h-[60vh] items-center py-20 md:py-28 lg:py-32">
+        <div className="flex min-h-[60vh] items-center py-10 md:py-28">
           <div className="max-w-3xl">
             {/* CHANGED: Text color to Light Sky Blue/Blue-100 */}
             <p className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-blue-100 mb-4 border border-white/10">
