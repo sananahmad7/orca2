@@ -32,7 +32,7 @@ const Footer: FC = () => {
 
           {/* Services column */}
           <div>
-            <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-[#00ffdF]/80 mb-3">
+            <h3 className="text-lg font-bold tracking-[0.18em] uppercase text-[#1677B3]/80 mb-3">
               Services
             </h3>
             <ul className="space-y-2 text-sm md:text-[15px]">
@@ -73,7 +73,7 @@ const Footer: FC = () => {
 
           {/* Company / Misc */}
           <div>
-            <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-[#00ffdF]/80 mb-3">
+            <h3 className="text-lg font-bold tracking-[0.18em] uppercase text-[#1677B3]/80 mb-3">
               Company
             </h3>
             <ul className="space-y-2 text-sm md:text-[15px]">

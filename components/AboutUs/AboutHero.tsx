@@ -8,7 +8,7 @@ const AboutHero: FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/Hero.jpg" // TODO: replace with your image in /public
+          src="/Hero.jpg"
           alt="Team collaborating in a modern workspace"
           fill
           priority
@@ -16,15 +16,20 @@ const AboutHero: FC = () => {
         />
       </div>
 
-      {/* Color Overlay (Black + Ocean Blue) */}
-      {/* CHANGED: Replaced Teal rgba(0,159,139) with Ocean Blue rgba(22,119,179) */}
+      {/* Color Overlay */}
       <div className="pointer-events-none absolute inset-0 opacity-90 -z-10 bg-[radial-gradient(circle_at_top,_rgba(22,119,179,0.6)_0,_transparent_55%),linear-gradient(to_bottom_right,rgba(0,0,0,0.8),rgba(0,0,0,0.9))]" />
 
-      {/* Content */}
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex min-h-[60vh] items-center py-10 md:py-28">
+      {/* Main Layout Fix:
+        1. 'min-h-[60vh]': Ensures height.
+        2. 'flex items-center': Vertically centers the content.
+        3. 'pt-32 pb-20': 
+            - Added extra top padding (pt-32) to account for the Navigation Bar height.
+            - Keeps bottom padding (pb-20) standard.
+            - This ensures the text looks visually centered in the *visible* space.
+      */}
+      <div className="min-h-[60vh] flex items-center pt-32 pb-20 md:pt-40 md:pb-28">
+        <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-3xl">
-            {/* CHANGED: Text color to Light Sky Blue/Blue-100 */}
             <p className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-blue-100 mb-4 border border-white/10">
               About Orca Edge
             </p>
