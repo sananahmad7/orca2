@@ -29,7 +29,7 @@ export default function ContactForm() {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -71,7 +71,7 @@ export default function ContactForm() {
       }
 
       setSuccessMessage(
-        "Message sent successfully. We'll be in touch shortly."
+        "Message sent successfully. We'll be in touch shortly.",
       );
       // Reset form and captcha
       setFormData({ fullName: "", email: "", phone: "", message: "" });
@@ -80,7 +80,7 @@ export default function ContactForm() {
     } catch (error: unknown) {
       if (error instanceof Error) {
         setErrorMessage(
-          error.message || "Something went wrong. Please try again."
+          error.message || "Something went wrong. Please try again.",
         );
       } else {
         setErrorMessage("Something went wrong. Please try again.");
@@ -236,12 +236,12 @@ export default function ContactForm() {
             <div className="absolute inset-0 rounded-3xl bg-[#1677B3] bg-[radial-gradient(circle_at_top,_#38bdf8_0,_#1677B3_45%,#0f4c75_100%)] opacity-95" />
 
             {/* Content */}
-            <div className="relative z-10 h-full w-full rounded-3xl px-7 py-8 md:px-10 md:py-12 text-white flex flex-col justify-between">
+            <div className="relative z-10 h-full w-full rounded-3xl px-7 py-8 md:px-10 md:py-12 text-white flex flex-col justify-between bg-[#1B7BB4]">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#38bdf8] mb-3">
                   Orca Edge
                 </p>
-                <h2 className="text-3xl xl:text-4xl  font-extrabold leading-tight mb-4">
+                <h2 className="text-3xl xl:text-4xl font-extrabold leading-tight mb-4">
                   Let&apos;s make your next digital move count.
                 </h2>
                 <p className="text-sm lg:text-base text-blue-50 max-w-md mb-8">
@@ -273,14 +273,32 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              {/* Contact details / subtle footer */}
-              <div className="mt-8 border-t border-white/10 pt-6 text-xs md:text-sm text-blue-100">
-                <p className="font-semibold tracking-[0.16em] uppercase mb-2">
-                  Prefer email?
-                </p>
-                <p>
-                  Send a note to hello@orcaedge.com with any supporting docs.
-                </p>
+              {/* Contact Details Section */}
+              <div className="mt-8 border-t border-white/20 pt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#7dd3fc]">
+                      Email
+                    </span>
+                    <a
+                      href="mailto:mohsinali.05961@gmail.com"
+                      className="text-base md:text-lg font-medium hover:text-[#38bdf8] transition-colors"
+                    >
+                      mohsinali.05961@gmail.com
+                    </a>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#7dd3fc]">
+                      Phone
+                    </span>
+                    <a
+                      href="tel:+92 3245008073"
+                      className="text-base md:text-lg font-medium hover:text-[#38bdf8] transition-colors"
+                    >
+                      +92 3245008073
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
