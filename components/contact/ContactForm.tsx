@@ -2,6 +2,9 @@
 
 import { FormEvent, useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+// 1. Import icons
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
 type ContactFormState = {
   fullName: string;
@@ -299,6 +302,29 @@ export default function ContactForm() {
                     </a>
                   </div>
                 </div>
+
+                {/* --- Social Icons Added Here --- */}
+                <div className="mt-8 flex items-center gap-5">
+                  <Link
+                    href="https://www.linkedin.com" // Replace with actual URL
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-white hover:-translate-y-1 transition-all duration-300"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin size={26} />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com" // Replace with actual URL
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-white hover:-translate-y-1 transition-all duration-300"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram size={26} />
+                  </Link>
+                </div>
+                {/* ------------------------------- */}
               </div>
             </div>
           </div>
