@@ -40,64 +40,51 @@ export default function OurProcess() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-20 md:py-25">
-      {/* Background accents */}
+    <section className="relative overflow-hidden bg-slate-50 py-20 font-nunito md:py-24">
+      {/* Background decoration */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-10 top-10 h-80 w-80 animate-pulse rounded-full bg-[#1677B3]/5 blur-3xl" />
         <div
           className="absolute right-20 top-1/3 h-96 w-96 animate-pulse rounded-full bg-[#38bdf8]/10 blur-3xl"
           style={{ animationDelay: "1s" }}
         />
-        <div
-          className="absolute bottom-0 left-1/3 h-80 w-80 animate-pulse rounded-full bg-[#1677B3]/5 blur-3xl"
-          style={{ animationDelay: "2s" }}
-        />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
-        {/* Header */}
-        <div className="mb-16 text-center md:mb-20">
-          <h2 className="mb-4 font-nunito text-3xl font-bold text-slate-900 2xl:text-4xl">
-            Our Process
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-            A strategic, collaborative approach to delivering exceptional
-            results for your business.
-          </p>
-        </div>
-
-        {/* NEW LAYOUT: Image + Steps */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-stretch lg:gap-12">
-          {/* Left: Image panel */}
-          <div className="lg:col-span-5">
-            <div className="relative h-[320px] overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg shadow-blue-900/5 sm:h-[420px] lg:h-[560px]">
-              {/* Replace src with your real image */}
+        {/* Main Grid: items-stretch guarantees columns are same height */}
+        <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-12">
+          {/* LEFT COLUMN: Image Section */}
+          <div className="relative h-full min-h-[400px] w-full lg:col-span-5 lg:min-h-0">
+            {/* Container must have h-full and relative for Next/Image fill to work */}
+            <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-lg shadow-blue-900/5">
               <Image
-                src="/process.jpg"
-                alt="Team collaborating on strategy and delivery"
+                src="/process.jpg" // Replace with your actual image path
+                alt="Our Process"
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                priority={false}
+                priority
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
-
-              {/* Small caption chip */}
-              <div className="absolute bottom-5 left-5 right-5">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur">
-                  <span className="h-2 w-2 rounded-full bg-white/80" />
-                  Strategy → Design → Build → Optimize
-                </div>
+              {/* Optional: Overlay Text if needed, remove if strictly just image */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-8 flex flex-col justify-end">
+                <h2 className="text-3xl font-extrabold text-white">
+                  How We Work
+                </h2>
+                <p className="text-blue-100 mt-2">
+                  A structured path to digital growth.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Right: Steps panel */}
+          {/* RIGHT COLUMN: Interactive Steps Panel */}
           <div className="lg:col-span-7">
-            <div className="relative h-full overflow-hidden rounded-3xl border border-slate-200 bg-white/60 p-6 shadow-lg shadow-blue-900/5 backdrop-blur md:p-8 lg:h-[560px]">
+            <div
+              // h-full ensures this card fills the entire height of the grid cell
+              // lg:min-h-[560px] keeps a minimum baseline but allows growth to prevent overflow
+              className="relative h-full overflow-hidden rounded-3xl border border-slate-200 bg-white/60 p-6 shadow-lg shadow-blue-900/5 backdrop-blur md:p-8 lg:min-h-[560px]"
+            >
               {/* Top bar */}
               <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
                 <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700">
@@ -158,7 +145,7 @@ export default function OurProcess() {
               {/* Bottom divider */}
               <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-[#1677B3]/20 to-transparent" />
 
-              {/* CTA inside panel (keeps spacing theme) */}
+              {/* CTA inside panel */}
               <div className="mt-8 flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
                 <p className="text-lg text-slate-600">
                   Ready to start your journey with us?
@@ -173,22 +160,6 @@ export default function OurProcess() {
             </div>
           </div>
         </div>
-
-        {/* Optional: keep original bottom CTA spacing if you prefer it outside */}
-        {/* If you want it outside, remove the CTA inside the panel above and uncomment below.
-        <div className="mt-16 md:mt-20 text-center">
-          <p className="mb-6 text-lg text-slate-600">
-            Ready to start your journey with us?
-          </p>
-          <Link
-            href={"/contact"}
-            className="inline-flex items-center cursor-pointer justify-center px-8 py-3 bg-[#1677B3] text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300 hover:bg-[#146aa0]"
-          >
-            Let's Work Together
-            <span className="ml-2">→</span>
-          </Link>
-        </div>
-        */}
       </div>
     </section>
   );

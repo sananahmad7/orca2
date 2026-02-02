@@ -92,13 +92,13 @@ const CustomerReviews = () => {
         />
 
         {/* This container controls the left/right padding */}
-        <div className="mx-auto container px-4 md:px-8">
+        <div className="mx-auto container px-4 md:px-8 ">
           <div className="relative w-full overflow-hidden">
             <div className="flex w-max animate-scroll gap-6 py-2">
               {displayReviews.map((review, index) => (
                 <div
                   key={index}
-                  className="w-full max-w-[320px] shrink-0 rounded-3xl bg-[#1B7BB4] p-8 shadow-[0_20px_50px_rgba(27,123,180,0.2)] md:max-w-[420px]"
+                  className="w-full max-w-[320px] shrink-0 rounded-3xl bg-[#1B7BB4] p-8  md:max-w-[420px]"
                 >
                   <div>
                     <div className="mb-5 flex gap-1">
